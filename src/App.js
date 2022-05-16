@@ -106,7 +106,7 @@ function App() {
       setLoading(true);
       const formData = new FormData();
       formData.append("file", file);
-      const API_URL = "http://localhost:8080/files";
+      const API_URL = "http://localhost:8081/uploadFiles";
       const response = await axios.put(API_URL, formData, {
         onUploadProgress: (progressEvent) => {
           const percentCompleted = Math.round(
